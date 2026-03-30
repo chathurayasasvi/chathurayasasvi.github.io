@@ -59,9 +59,10 @@ export default function Hero() {
           </div>
 
           <p className="text-[#666] leading-relaxed mb-12 max-w-lg text-sm md:text-base">
-            I design the board. Write the driver. Build the test jig.
-            Ship the product. Three years at Atlas Labs doing exactly that —
-            from 6-layer mixed-signal mainboards to 70µA IoT devices.
+            Experienced Hardware and PCB Design Engineer with a proven track record of designing, testing, and validating over 20 custom PCBs. Specialized in full-cycle hardware development, from schematic capture and layout to bring-up and validation. Demonstrated expertise across a diverse range of technologies, including high-power industrial control, high-speed digital interfaces (impedance-controlled), flexible electronics (Flex PCBs),
+            ultra-low power IoT devices, and complex mixed-signal motherboards.
+            Proficient in developing testing firmware and validation scripts to ensure robust,
+            production-ready hardware.
           </p>
 
           {/* CTAs */}
