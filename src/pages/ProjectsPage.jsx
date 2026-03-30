@@ -268,13 +268,29 @@ function ProjectCard({ project: p, index }) {
           ))}
         </ul>
 
-        {/* Tags */}
-        <div className="flex flex-wrap gap-1.5 pt-1">
-          {p.tags.map(t => (
-            <span key={t} className="text-[10px] font-mono text-[#888] px-2 py-0.5 rounded-sm border border-[#1e1e1e] bg-[#111]">
-              {t}
-            </span>
-          ))}
+        {/* Tags & Link */}
+        <div className="flex items-center justify-between gap-3 pt-1">
+          <div className="flex flex-wrap gap-1.5">
+            {p.tags.map(t => (
+              <span key={t} className="text-[10px] font-mono text-[#888] px-2 py-0.5 rounded-sm border border-[#1e1e1e] bg-[#111]">
+                {t}
+              </span>
+            ))}
+          </div>
+
+          {p.link && (
+            <a 
+              href={p.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 font-mono text-[10px] text-[#c07a3f] hover:text-[#e09a5f] transition-colors border-b border-[#c07a3f]/0 hover:border-[#c07a3f]/40 pb-0.5"
+            >
+              {p.link.label}
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M11 1L6 6m5-5v4m0-4H7m0 10h-5a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h4" />
+              </svg>
+            </a>
+          )}
         </div>
       </div>
 

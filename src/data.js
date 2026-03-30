@@ -107,6 +107,9 @@ export const ALL_PROJECTS = [
     tags: ['USB HS', 'Ethernet', 'Test Jig', 'Camera', 'Bring-up'],
     status: 'Completed',
     nda: true,
+    images: ['/projects/p05/flash-jig-ai.png'],
+    thumbnail: '/projects/p05/flash-jig-ai.png',
+    link: { label: 'View Research', href: 'https://www.linkedin.com/feed/update/urn:li:activity:7411114272187052032/' },
   },
   {
     id: 'P06',
@@ -127,6 +130,9 @@ export const ALL_PROJECTS = [
     tags: ['SBC', 'Mixed-Signal', 'PoE', 'I²S Audio', 'LED Driver'],
     status: 'In Production',
     nda: true,
+    images: ['/projects/p06/stall-monitor-ai.png'],
+    thumbnail: '/projects/p06/stall-monitor-ai.png',
+    link: { label: 'View Resource', href: 'https://www.horcery.com/stall-monitor-system' },
   },
   // Flexible Electronics & Wearables
   {
@@ -164,6 +170,8 @@ export const ALL_PROJECTS = [
     tags: ['Flex PCB', 'IMU', 'I²C', 'Address Translation', 'Rigid-Flex'],
     status: 'Completed',
     nda: false,
+    images: ['/projects/p08/1.jpg', '/projects/p08/2.png', '/projects/p08/3.jpg'],
+    thumbnail: '/projects/p04/1.jpg',
   },
   // Ultra-Low Power & Wireless IoT
   {
