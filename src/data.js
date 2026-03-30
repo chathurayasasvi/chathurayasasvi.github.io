@@ -67,6 +67,8 @@ export const ALL_PROJECTS = [
     tags: ['UVC', 'High-Voltage', 'Current Sensing', 'Safety Logic'],
     status: 'Completed',
     nda: false,
+    images: ['/projects/p03/1.png', '/projects/p03/2.png', '/projects/p03/3.jpg'],
+    thumbnail: '/projects/p03/1.png',
   },
   // High-Speed Digital & Mixed-Signal
   {
