@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #080808;
+  color: #e0dbd3;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Slightly warm off-white — like PCB silkscreen ink */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080808; }
+::-webkit-scrollbar-thumb { background: #c07a3f; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #d4894d; }
+
+::selection { background: rgba(192, 122, 63, 0.2); }
+
+.glass {
+  background: rgba(8, 8, 8, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* PCB grain — mimics soldermask texture */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  z-index: 9999;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* Via pulse — used on status dot */
+@keyframes via-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(192, 122, 63, 0.5); }
+  50%       { box-shadow: 0 0 0 5px rgba(192, 122, 63, 0); }
+}
+.via-pulse {
+  animation: via-pulse 2.5s ease-in-out infinite;
+}
+
+/* Bento grid — issue #9: gap is too large at small viewports */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: clamp(6px, 1.5vw, 10px);
+}
+.bento-7 { grid-column: span 7; }
+.bento-5 { grid-column: span 5; }
+.bento-4 { grid-column: span 4; }
+.bento-12 { grid-column: span 12; }
+
+@media (max-width: 900px) {
+  .bento-7, .bento-5, .bento-4, .bento-12 { grid-column: span 12; }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  .bento-4 { grid-column: span 6; }
+}

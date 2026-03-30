@@ -1,0 +1,61 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          # If deploying to username.github.io            → leave VITE_BASE unset (defaults to /)
+          # If deploying to username.github.io/repo-name  → set VITE_BASE in repo Settings → Variables
+          VITE_BASE: ${{ vars.VITE_BASE || '/' }}
+          # Project media overrides (optional — set in repo Settings → Secrets or Variables)
+          VITE_PROJECT_P01_MEDIA: ${{ vars.VITE_PROJECT_P01_MEDIA }}
+          VITE_PROJECT_P02_MEDIA: ${{ vars.VITE_PROJECT_P02_MEDIA }}
+          VITE_PROJECT_P03_MEDIA: ${{ vars.VITE_PROJECT_P03_MEDIA }}
+          VITE_PROJECT_P04_MEDIA: ${{ vars.VITE_PROJECT_P04_MEDIA }}
+          VITE_PROJECT_P05_MEDIA: ${{ vars.VITE_PROJECT_P05_MEDIA }}
+          VITE_PROJECT_P06_MEDIA: ${{ vars.VITE_PROJECT_P06_MEDIA }}
+          VITE_PROJECT_P07_MEDIA: ${{ vars.VITE_PROJECT_P07_MEDIA }}
+          VITE_PROJECT_P08_MEDIA: ${{ vars.VITE_PROJECT_P08_MEDIA }}
+          VITE_PROJECT_P09_MEDIA: ${{ vars.VITE_PROJECT_P09_MEDIA }}
+          VITE_PROJECT_P10_MEDIA: ${{ vars.VITE_PROJECT_P10_MEDIA }}
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

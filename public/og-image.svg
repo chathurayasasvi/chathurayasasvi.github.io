@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#080808"/>
+
+  <!-- Subtle grid -->
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.04"/>
+    </pattern>
+    <radialGradient id="fade" cx="40%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="1"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#fade)"/>
+
+  <!-- PCB trace elements — right side decoration -->
+  <!-- Power rail -->
+  <line x1="680" y1="80" x2="1160" y2="80" stroke="#c07a3f" stroke-width="3" opacity="0.25"/>
+  <!-- Signal traces -->
+  <polyline points="750,80 792,122 792,300 834,342 834,550" fill="none" stroke="#c07a3f" stroke-width="1.2" opacity="0.2"/>
+  <polyline points="900,80 942,122 942,250 984,292 984,550" fill="none" stroke="#c07a3f" stroke-width="1.2" opacity="0.2"/>
+  <line x1="1060" y1="80" x2="1060" y2="550" stroke="#c07a3f" stroke-width="1.2" opacity="0.2"/>
+  <!-- Diff pair -->
+  <line x1="680" y1="200" x2="1160" y2="200" stroke="#c07a3f" stroke-width="1" opacity="0.12"/>
+  <line x1="680" y1="212" x2="1160" y2="212" stroke="#c07a3f" stroke-width="1" opacity="0.12"/>
+  <!-- Horizontal bus -->
+  <line x1="792" y1="342" x2="984" y2="342" stroke="#c07a3f" stroke-width="1.5" opacity="0.18"/>
+
+  <!-- Vias -->
+  <circle cx="750" cy="80" r="7" fill="#080808" stroke="#c07a3f" stroke-width="2" opacity="0.3"/>
+  <circle cx="750" cy="80" r="3" fill="#c07a3f" opacity="0.3"/>
+  <circle cx="900" cy="80" r="7" fill="#080808" stroke="#c07a3f" stroke-width="2" opacity="0.3"/>
+  <circle cx="900" cy="80" r="3" fill="#c07a3f" opacity="0.3"/>
+  <circle cx="1060" cy="80" r="7" fill="#080808" stroke="#c07a3f" stroke-width="2" opacity="0.3"/>
+  <circle cx="1060" cy="80" r="3" fill="#c07a3f" opacity="0.3"/>
+  <circle cx="792" cy="300" r="5" fill="#080808" stroke="#c07a3f" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="792" cy="300" r="2" fill="#c07a3f" opacity="0.25"/>
+  <circle cx="984" cy="342" r="5" fill="#080808" stroke="#c07a3f" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="984" cy="342" r="2" fill="#c07a3f" opacity="0.25"/>
+
+  <!-- IC footprint -->
+  <rect x="840" y="390" width="80" height="110" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.2" rx="2"/>
+  <rect x="960" y="260" width="65" height="90" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.2" rx="2"/>
+
+  <!-- Board edge marks -->
+  <polyline points="680,40 680,20 700,20" stroke="#c07a3f" stroke-width="1" opacity="0.15" stroke-linecap="round"/>
+  <polyline points="1160,20 1180,20 1180,40" stroke="#c07a3f" stroke-width="1" opacity="0.15" stroke-linecap="round"/>
+  <polyline points="680,590 680,610 700,610" stroke="#c07a3f" stroke-width="1" opacity="0.15" stroke-linecap="round"/>
+  <polyline points="1160,610 1180,610 1180,590" stroke="#c07a3f" stroke-width="1" opacity="0.15" stroke-linecap="round"/>
+
+  <!-- F.Cu annotation -->
+  <text x="700" y="38" fill="#c07a3f" font-size="11" font-family="monospace" opacity="0.2" letter-spacing="1">F.Cu</text>
+
+  <!-- Left content area -->
+  <!-- Status dot + label -->
+  <circle cx="60" cy="110" r="5" fill="#c07a3f"/>
+  <text x="76" y="115" fill="#c07a3f" font-size="13" font-family="monospace" letter-spacing="2" opacity="0.8">OPEN TO WORK</text>
+
+  <!-- Name -->
+  <text x="56" y="230" fill="#e0dbd3" font-size="80" font-family="system-ui, sans-serif" font-weight="900" letter-spacing="-3">Chathura</text>
+  <text x="56" y="330" fill="#c07a3f" font-size="80" font-family="system-ui, sans-serif" font-weight="900" letter-spacing="-3">Fernando</text>
+
+  <!-- Divider line -->
+  <line x1="56" y1="360" x2="200" y2="360" stroke="#c07a3f" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Role -->
+  <text x="56" y="395" fill="#888" font-size="18" font-family="monospace" letter-spacing="1">PCB DESIGNER &amp; EMBEDDED SYSTEMS ENGINEER</text>
+
+  <!-- Key stats row -->
+  <text x="56" y="460" fill="#555" font-size="13" font-family="monospace">Atlas Labs · Kalutara, Sri Lanka · 3 years</text>
+
+  <!-- Tags -->
+  <rect x="56" y="490" width="100" height="26" rx="3" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.3"/>
+  <text x="72" y="507" fill="#c07a3f" font-size="11" font-family="monospace" opacity="0.7">KiCad</text>
+
+  <rect x="168" y="490" width="118" height="26" rx="3" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.3"/>
+  <text x="184" y="507" fill="#c07a3f" font-size="11" font-family="monospace" opacity="0.7">Altium Designer</text>
+
+  <rect x="298" y="490" width="90" height="26" rx="3" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.3"/>
+  <text x="314" y="507" fill="#c07a3f" font-size="11" font-family="monospace" opacity="0.7">Flex PCB</text>
+
+  <rect x="400" y="490" width="86" height="26" rx="3" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.3"/>
+  <text x="416" y="507" fill="#c07a3f" font-size="11" font-family="monospace" opacity="0.7">LoRaWAN</text>
+
+  <rect x="498" y="490" width="68" height="26" rx="3" fill="none" stroke="#c07a3f" stroke-width="1" opacity="0.3"/>
+  <text x="514" y="507" fill="#c07a3f" font-size="11" font-family="monospace" opacity="0.7">USB 3.0</text>
+
+  <!-- URL -->
+  <text x="56" y="578" fill="#333" font-size="13" font-family="monospace">chathurafernando.dev</text>
+</svg>

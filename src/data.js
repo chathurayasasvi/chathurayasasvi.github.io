@@ -1,0 +1,306 @@
+export const MARQUEE_ITEMS = [
+  'KiCad', 'Altium Designer', 'NRF5340', 'NRF7002', 'STM32', 'ESP32',
+  'Zephyr RTOS', 'C / C++', 'Python', 'Rust', 'LoRaWAN', 'BLE GATT',
+  'USB 3.0', 'PCIe', 'Power over Ethernet', 'Flex PCB', 'I²C', 'SPI',
+  'CAN Bus', 'UART', 'QSPI', 'I²S', 'J-Link', 'JTAG', 'PPK2',
+  'PlatformIO', 'Orange Pi', 'Radxa', 'Raspberry Pi', 'EasyEDA',
+]
+
+// ─── All 10 projects ──────────────────────────────────────────────────────────
+export const ALL_PROJECTS = [
+  // High-Power & Industrial
+  {
+    id: 'P01',
+    cat: 'high-power',
+    catLabel: 'High-Power & Industrial',
+    layers: '4L FR4',
+    mcu: 'ATMEGA2560-16AU',
+    title: 'High-Power PSU Control Board',
+    body: 'Manages and distributes power from four PSUs — 1,800W total — across dedicated load channels. SSR-controlled 110–230V AC switching with per-channel current sensing and MOSFET-based load protection.',
+    specs: [
+      '4× PSU inputs — 2× 600W, 1× 480W, 1× 120W',
+      'SSR-based 110–230V AC line switching',
+      'Integrated current sensing on every SSR channel',
+      'RS485 industrial comms + CP2102N USB-UART bridge',
+      'GPIO buffers protecting all MCU signal pins',
+    ],
+    tags: ['SSR', '110–230V AC', 'RS485', 'Current Sensing', 'ATMEGA2560'],
+    status: 'Completed',
+    nda: false,
+    images: ['/projects/p01/1.png', '/projects/p01/2.png', '/projects/p01/3.png', '/projects/p01/4.jpeg', '/projects/p01/5.jpg'],
+    thumbnail: '/projects/p01/2.png',
+  },
+  {
+    id: 'P02',
+    cat: 'high-power',
+    catLabel: 'High-Power & Industrial',
+    layers: '4L FR4',
+    mcu: 'ATMEGA2560-16AU',
+    title: 'Industrial Helper Control Module',
+    body: 'Comprehensive controller for an OnLogic Helix X511 industrial computer — managing peristaltic pumps, cooling fans, solenoids, and lighting systems alongside a high-precision 24-bit ADC sensor array.',
+    specs: [
+      'MOSFET drivers for pumps, fans, solenoids, lighting',
+      '24-bit ADC for high-precision analog inputs',
+      'Proximity sensor interfacing',
+      'GPIO buffers for MCU pin protection',
+      'Built strictly to IPC industry standards',
+    ],
+    tags: ['MOSFET', '24-bit ADC', 'Industrial', 'ATMEGA2560', 'OnLogic'],
+    status: 'Completed',
+    nda: false,
+    images: ['/projects/p02/1.png', '/projects/p02/2.png', '/projects/p02/3.jpg'],
+    thumbnail: '/projects/p02/2.png',
+  },
+  {
+    id: 'P03',
+    cat: 'high-power',
+    catLabel: 'High-Power & Industrial',
+    layers: '2L FR4',
+    mcu: null,
+    title: 'High-Power UV Light Controller',
+    body: 'Dedicated controller for high-power ultraviolet sterilisation systems. Integrated high-current sensing for safety monitoring, with logic outputs signalling HV availability back to the master MCU.',
+    specs: [
+      'High-current sensing for UVC safety monitoring',
+      'HV availability signal output to master MCU',
+      'Isolation between HV driver and logic side',
+    ],
+    tags: ['UVC', 'High-Voltage', 'Current Sensing', 'Safety Logic'],
+    status: 'Completed',
+    nda: false,
+  },
+  // High-Speed Digital & Mixed-Signal
+  {
+    id: 'P04',
+    cat: 'high-speed',
+    catLabel: 'High-Speed Digital & Mixed-Signal',
+    layers: '4L FR4',
+    mcu: null,
+    title: 'NVMe Carrier Board — Radxa 4D SBC',
+    body: 'Expands Radxa 4D storage capabilities via PCIe. Impedance-controlled stack-up throughout — differential pairs length-matched to PCIe compliance spec.',
+    specs: [
+      'PCIe differential pair routing to M.2 Key-M slot',
+      'Controlled impedance stack-up (85Ω diff)',
+      'Trace length-matching to PCIe spec',
+      'Designed for Radxa 4D SBC form factor',
+    ],
+    tags: ['PCIe', 'NVMe', 'Impedance Control', 'High-Speed', 'Radxa'],
+    status: 'Completed',
+    nda: false,
+  },
+  {
+    id: 'P05',
+    cat: 'high-speed',
+    catLabel: 'High-Speed Digital & Mixed-Signal',
+    layers: '4L FR4',
+    mcu: null,
+    title: 'Camera Flash Jig & Data Board',
+    body: 'Specialised test and bring-up jig for a stall monitor camera system. High-speed USB and Ethernet communication lines routed and validated for production.',
+    specs: [
+      'High-speed USB interface routing and validation',
+      'Ethernet line routing to production spec',
+      'Test point array for systematic bring-up',
+    ],
+    tags: ['USB HS', 'Ethernet', 'Test Jig', 'Camera', 'Bring-up'],
+    status: 'Completed',
+    nda: true,
+  },
+  {
+    id: 'P06',
+    cat: 'high-speed',
+    catLabel: 'High-Speed Digital & Mixed-Signal',
+    layers: '6L FR4',
+    mcu: null,
+    title: 'Complex Mixed-Signal SBC Motherboard',
+    body: "Full hardware motherboard for the Horcery Stall Monitor — SBC integration with mixed-signal peripherals, high-power LED control, complete audio subsystem including I²S codec, and firmware for the auxiliary MCU.",
+    specs: [
+      'SBC integration with mixed-signal peripherals',
+      'High-power LED driver array',
+      'I²S audio subsystem + codec driver',
+      'Environmental sensor array integration',
+      'Auxiliary MCU firmware written from scratch',
+      'PoE power delivery',
+    ],
+    tags: ['SBC', 'Mixed-Signal', 'PoE', 'I²S Audio', 'LED Driver'],
+    status: 'In Production',
+    nda: true,
+  },
+  // Flexible Electronics & Wearables
+  {
+    id: 'P07',
+    cat: 'flex',
+    catLabel: 'Flexible Electronics & Wearables',
+    layers: '2L Flex',
+    mcu: null,
+    title: 'Biometric Animal Strap Sensor',
+    body: 'Wearable flex PCB designed to record animal heartbeat and Galvanic Skin Response. Serpentine traces handle flex durability; dedicated ADCs capture each biometric channel independently.',
+    specs: [
+      'GSR sensor integration with dedicated precision ADCs',
+      'Serpentine trace routing for flex durability',
+      '2-layer polyimide substrate',
+      'Designed for wearable strap form factor',
+    ],
+    tags: ['Flex PCB', 'GSR', 'ADC', 'Wearable', 'Biometric'],
+    status: 'Completed',
+    nda: false,
+  },
+  {
+    id: 'P08',
+    cat: 'flex',
+    catLabel: 'Flexible Electronics & Wearables',
+    layers: '4L + 2L Flex',
+    mcu: null,
+    title: 'Address-Translatable IMU Sensor System',
+    body: "Two-board solution for motion tracking. Rigid 4L main board handles address translation logic; 2L flex carrier puts the IMU exactly where it needs to be mechanically. Solved I²C collision without an extra microcontroller.",
+    specs: [
+      '4L rigid main board with I²C address translation',
+      '2L flex carrier for precise mechanical IMU placement',
+      'No additional MCU required for address collision',
+      'Modular rigid+flex architecture',
+    ],
+    tags: ['Flex PCB', 'IMU', 'I²C', 'Address Translation', 'Rigid-Flex'],
+    status: 'Completed',
+    nda: false,
+  },
+  // Ultra-Low Power & Wireless IoT
+  {
+    id: 'P09',
+    cat: 'iot',
+    catLabel: 'Ultra-Low Power & Wireless IoT',
+    layers: '4L FR4',
+    mcu: 'NRF5340',
+    title: 'Ultra-Low Power Wireless Bucket Meter',
+    body: 'Complete PCB architecture redesign to achieve extreme battery life on a wireless fluid monitoring device. Custom BLE firmware with aggressive power state management across every peripheral.',
+    specs: [
+      'Full PCB architecture redesign for ultra-low power',
+      'Efficient LED controller integration',
+      'Custom BLE firmware with power state management',
+      'Wireless fluid and resource monitoring',
+    ],
+    tags: ['BLE', 'Ultra-Low Power', 'NRF5340', 'IoT', 'Firmware'],
+    status: 'Completed',
+    nda: true,
+  },
+  // System-Level Engineering
+  {
+    id: 'P10',
+    cat: 'system',
+    catLabel: 'System-Level Engineering',
+    layers: 'Multi-board',
+    mcu: null,
+    title: 'Krakatoa — Electromechanical System Modification',
+    body: "Subsystem design and modification for a complex industrial machine. Handled the full redesign and integration of main systems and subsystems to improve machine performance and reliability across the board.",
+    specs: [
+      'Main system and subsystem redesign',
+      'Electromechanical integration and modification',
+      'Improved machine performance and reliability',
+      'CAN Bus control architecture',
+    ],
+    tags: ['Industrial', 'Electromechanical', 'CAN Bus', 'System Integration'],
+    status: 'Completed',
+    nda: true,
+  },
+]
+
+export const PROJECT_CATEGORIES = [
+  { id: 'high-power', label: 'High-Power & Industrial',            note: 'SSR · 110–230V AC · Current Sensing' },
+  { id: 'high-speed', label: 'High-Speed Digital & Mixed-Signal',  note: 'PCIe · USB 3.0 · Impedance Control' },
+  { id: 'flex',       label: 'Flexible Electronics & Wearables',   note: 'Flex PCB · Polyimide · Wearable' },
+  { id: 'iot',        label: 'Ultra-Low Power & Wireless IoT',      note: 'BLE · LoRaWAN · µA Sleep' },
+  { id: 'system',     label: 'System-Level Engineering',            note: 'Multi-board · Industrial · CAN' },
+]
+
+// Featured subset shown on the main landing page (bento grid)
+export const PROJECTS = [
+  { ...ALL_PROJECTS.find(p => p.id === 'P06'), bento: '7' },
+  { ...ALL_PROJECTS.find(p => p.id === 'P01'), bento: '5' },
+  { ...ALL_PROJECTS.find(p => p.id === 'P09'), bento: '4' },
+  { ...ALL_PROJECTS.find(p => p.id === 'P07'), bento: '4' },
+  { ...ALL_PROJECTS.find(p => p.id === 'P04'), bento: '4' },
+]
+
+export const SKILLS = [
+  {
+    category: 'PCB Design',
+    items: 'Multi-layer FR4 (up to 6L), Flex & Rigid-Flex, Impedance-Controlled Routing, Mixed-Signal (AFE / Audio), Power Electronics (PoE, SMPS, AC), High-Speed (USB 3.0, PCIe, NVMe), High-Voltage (110–230V AC), Thermal / Aluminium Boards',
+  },
+  {
+    category: 'EDA Tools',
+    items: 'KiCad, Altium Designer, EasyEDA, Proteus, AutoCAD, MATLAB, DIALux',
+  },
+  {
+    category: 'MCUs & SBCs',
+    items: 'NRF5340, NRF7002, STM32, ESP32, AVR, Apollo3, Orange Pi, Radxa, LuxFox, Raspberry Pi, RAKWireless',
+  },
+  {
+    category: 'Protocols & Wireless',
+    items: 'BLE (GATT, Services, Characteristics), LoRaWAN, USB 2.0 / 3.0, PCIe, I²C, SPI, UART, QSPI, I²S, CAN Bus, PWM, ADC/DAC',
+  },
+  {
+    category: 'Firmware & OS',
+    items: 'C / C++, Python, Rust (Intermediate), Zephyr RTOS, Ubuntu / Armbian, Device Tree & SBC Config, Arduino, PlatformIO, RUI',
+  },
+  {
+    category: 'Testing & Validation',
+    items: 'Oscilloscope, Logic Analyzer, Electronic Load, LCR Meter, J-Link, JTAG, PPK2, Custom Flashing Jigs, Calibration Jig Design, Automated Validation Scripts, SMD Rework',
+  },
+]
+
+export const EXPERIENCE = [
+  {
+    company: 'Atlas Labs',
+    role: 'Embedded Engineer — Level 2',
+    period: 'Aug 2025 – Present',
+    current: true,
+    bullets: [
+      'Own the full hardware development lifecycle: architecture, layout, validation, production.',
+      'Manage outsourced PCB assembly partners — production runs, troubleshooting, quality compliance.',
+      'Design Flex, Aluminium, and mixed-signal PCBs with EMI/EMC and impedance requirements.',
+      'Lead post-launch work: reliability testing, feature integration, iterative board revisions.',
+      'Mentor interns and junior engineers on design decisions and best practices.',
+    ],
+  },
+  {
+    company: 'Atlas Labs',
+    role: 'Embedded Engineer — Level 1',
+    period: 'Aug 2024 – Aug 2025',
+    current: false,
+    bullets: [
+      'Designed the AI monitoring system mainboard: PoE, I²S audio path, high-speed USB 2.0/3.0.',
+      'Took the LoRaWAN smart scale from first schematic to market launch — 70µA deep sleep.',
+      'Wrote a production-ready I²C driver from scratch when no vendor driver existed.',
+      'Built the entire production validation ecosystem: flashing jigs, calibration jigs, automated self-test firmware.',
+    ],
+  },
+  {
+    company: 'Atlas Labs',
+    role: 'Associate Embedded Engineer — Level 2',
+    period: 'Aug 2023 – Aug 2024',
+    current: false,
+    bullets: [
+      'Designed hardware from single-layer prototypes to 6-layer FR4 and Flex PCBs.',
+      'Built custom sensor modules integrating IMU, ADC, GPS, and power supply circuits.',
+      'NRF7002/5340 development in Zephyr RTOS, QSPI flash integration, Orange Pi driver work.',
+    ],
+  },
+  {
+    company: 'Atlas Labs',
+    role: 'Junior Embedded Engineer',
+    period: 'Aug 2022 – Aug 2023',
+    current: false,
+    bullets: [
+      'Designed 1–6 layer PCBs with firmware for GPIO, UART, RS232, I²C, SPI, CAN, motor control.',
+      'High-voltage PCB design (110–230V AC), power electronics, mixed-signal layouts.',
+      'Operated production equipment: pick-and-place, reflow ovens, stencil printers.',
+    ],
+  },
+  {
+    company: 'Control Concepts (Pvt) Ltd',
+    role: 'Trainee Assistant Engineer',
+    period: 'Jan 2021 – Mar 2021',
+    current: false,
+    bullets: [
+      'On-site BMS installation and maintenance.',
+      'HVAC automation, AHU wiring, DDC panel installation.',
+    ],
+  },
+]
