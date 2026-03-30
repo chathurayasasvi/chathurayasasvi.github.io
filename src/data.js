@@ -107,9 +107,6 @@ export const ALL_PROJECTS = [
     tags: ['USB HS', 'Ethernet', 'Test Jig', 'Camera', 'Bring-up'],
     status: 'Completed',
     nda: true,
-    images: ['/projects/p05/stall-monitor.png', '/projects/p05/stall-monitor-stall.png'],
-    thumbnail: '/projects/p05/stall-monitor.png',
-    link: { label: 'View Product', href: 'https://www.horcery.com/stall-monitor-system' },
   },
   {
     id: 'P06',
@@ -130,6 +127,9 @@ export const ALL_PROJECTS = [
     tags: ['SBC', 'Mixed-Signal', 'PoE', 'I²S Audio', 'LED Driver'],
     status: 'In Production',
     nda: true,
+    images: ['/projects/p06/stall-monitor.png', '/projects/p06/stall-monitor-stall.png'],
+    thumbnail: '/projects/p06/stall-monitor.png',
+    link: { label: 'View Resource', href: 'https://www.horcery.com/stall-monitor-system' },
   },
   // Flexible Electronics & Wearables
   {
