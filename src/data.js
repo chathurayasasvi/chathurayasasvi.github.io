@@ -202,11 +202,11 @@ export const ALL_PROJECTS = [
 ]
 
 export const PROJECT_CATEGORIES = [
-  { id: 'high-power', label: 'High-Power & Industrial',            note: 'SSR · 110–230V AC · Current Sensing' },
-  { id: 'high-speed', label: 'High-Speed Digital & Mixed-Signal',  note: 'PCIe · USB 3.0 · Impedance Control' },
-  { id: 'flex',       label: 'Flexible Electronics & Wearables',   note: 'Flex PCB · Polyimide · Wearable' },
-  { id: 'iot',        label: 'Ultra-Low Power & Wireless IoT',      note: 'BLE · LoRaWAN · µA Sleep' },
-  { id: 'system',     label: 'System-Level Engineering',            note: 'Multi-board · Industrial · CAN' },
+  { id: 'high-power', label: 'High-Power & Industrial', note: 'SSR · 110–230V AC · Current Sensing' },
+  { id: 'high-speed', label: 'High-Speed Digital & Mixed-Signal', note: 'PCIe · USB 3.0 · Impedance Control' },
+  { id: 'flex', label: 'Flexible Electronics & Wearables', note: 'Flex PCB · Polyimide · Wearable' },
+  { id: 'iot', label: 'Ultra-Low Power & Wireless IoT', note: 'BLE · LoRaWAN · µA Sleep' },
+  { id: 'system', label: 'System-Level Engineering', note: 'Multi-board · Industrial · CAN' },
 ]
 
 // Featured subset shown on the main landing page (bento grid)
