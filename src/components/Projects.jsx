@@ -97,6 +97,25 @@ export default function Projects() {
   )
 }
 
+function NDABadge() {
+  return (
+    <span className="font-mono text-[9px] px-1.5 py-0.5 rounded-sm border border-[#333] text-[#888] tracking-wider uppercase">
+      Confidential
+    </span>
+  )
+}
+
+function StatusBadge({ status }) {
+  const cls = status === 'In Production'
+    ? 'border-[#c07a3f]/30 text-[#c07a3f] bg-[#c07a3f]/8'
+    : status === 'Ongoing'
+    ? 'border-[#555]/30 text-[#aaa]'
+    : 'border-[#2a2a2a] text-[#aaa]'
+  return (
+    <span className={`font-mono text-[10px] px-2 py-0.5 rounded-sm border ${cls}`}>{status}</span>
+  )
+}
+
 function ProjectCard({ project: p }) {
   return (
     <div className="group relative h-full rounded border border-[#1a1a1a] bg-[#0d0d0d] flex flex-col hover:border-[#c07a3f]/25 transition-colors duration-300 overflow-hidden">
@@ -113,13 +132,8 @@ function ProjectCard({ project: p }) {
         <span className="font-mono text-[11px] text-[#c07a3f]/60">{p.id}</span>
         <div className="flex items-center gap-2">
           <LayerBadge layers={p.layers} />
-          <span className={`font-mono text-[10px] px-2 py-0.5 rounded-sm border ${
-            p.status === 'In Production'
-              ? 'border-[#c07a3f]/30 text-[#c07a3f] bg-[#c07a3f]/8'
-              : p.status === 'Ongoing'
-              ? 'border-[#555]/30 text-[#aaa]'
-              : 'border-[#2a2a2a] text-[#aaa]'
-          }`}>{p.status}</span>
+          {p.nda && <NDABadge />}
+          <StatusBadge status={p.status} />
         </div>
       </div>
 
