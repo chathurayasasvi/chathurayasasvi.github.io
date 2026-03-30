@@ -191,6 +191,9 @@ export const ALL_PROJECTS = [
     tags: ['BLE', 'Ultra-Low Power', 'NRF5340', 'IoT', 'Firmware'],
     status: 'Completed',
     nda: true,
+    images: ['/projects/p09/bucket-meter-ai.png'],
+    thumbnail: '/projects/p09/bucket-meter-ai.png',
+    link: { label: 'View Resource', href: 'https://www.horcery.com/bucket-meter' },
   },
   // System-Level Engineering
   {
