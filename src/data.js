@@ -152,6 +152,8 @@ export const ALL_PROJECTS = [
     tags: ['Flex PCB', 'GSR', 'ADC', 'Wearable', 'Biometric'],
     status: 'Completed',
     nda: false,
+    images: ['/projects/p07/1.jpg', '/projects/p07/2.png'],
+    thumbnail: '/projects/p07/1.jpg',
   },
   {
     id: 'P08',
