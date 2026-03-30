@@ -24,7 +24,7 @@ export default function Experience() {
   const inView = useInView(ref, { once: true, margin: '-60px' })
 
   return (
-    <section id="experience" className="py-32 border-t border-[#141414]" ref={ref}>
+    <section id="experience" className="py-16 md:py-32 border-t border-[#141414]" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
