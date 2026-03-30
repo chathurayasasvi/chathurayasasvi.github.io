@@ -170,6 +170,8 @@ export const ALL_PROJECTS = [
     tags: ['Flex PCB', 'IMU', 'I²C', 'Address Translation', 'Rigid-Flex'],
     status: 'Completed',
     nda: false,
+    images: ['/projects/p08/1.jpg', '/projects/p08/2.png', '/projects/p08/3.jpg'],
+    thumbnail: '/projects/p04/1.jpg',
   },
   // Ultra-Low Power & Wireless IoT
   {
