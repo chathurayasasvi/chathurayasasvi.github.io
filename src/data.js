@@ -88,6 +88,8 @@ export const ALL_PROJECTS = [
     tags: ['PCIe', 'NVMe', 'Impedance Control', 'High-Speed', 'Radxa'],
     status: 'Completed',
     nda: false,
+    images: ['/projects/p04/1.jpg', '/projects/p04/2.png', '/projects/p04/3.jpg', '/projects/p04/nvme-vid.gif'],
+    thumbnail: '/projects/p04/1.jpg',
   },
   {
     id: 'P05',

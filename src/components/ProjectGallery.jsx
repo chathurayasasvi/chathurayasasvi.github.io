@@ -7,7 +7,7 @@ import Lightbox from './Lightbox'
 export default function ProjectGallery({ project }) {
   const images = project.images || []
   const hasImages = images.length > 0
-  
+
   // Start at the thumbnail if specified, otherwise the first image
   const initialIndex = project.thumbnail && images.includes(project.thumbnail)
     ? images.indexOf(project.thumbnail)
@@ -17,14 +17,15 @@ export default function ProjectGallery({ project }) {
   const [isHovered, setIsHovered] = useState(false)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
-  // Auto-advance
+  // Auto-advance (pause on GIF slide so it can play through)
+  const currentIsGif = images[currentIndex]?.endsWith('.gif')
   useEffect(() => {
-    if (!hasImages || images.length <= 1 || isHovered || lightboxOpen) return
+    if (!hasImages || images.length <= 1 || isHovered || lightboxOpen || currentIsGif) return
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length)
     }, 4000)
     return () => clearInterval(timer)
-  }, [hasImages, images.length, isHovered, lightboxOpen])
+  }, [hasImages, images.length, isHovered, lightboxOpen, currentIsGif])
 
   if (!hasImages) {
     return (
@@ -47,14 +48,15 @@ export default function ProjectGallery({ project }) {
 
   return (
     <>
-      <div 
+      <div
         className="relative border-b border-[#111] bg-[#080808] aspect-[16/9] w-full group overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <img 
-          src={images[currentIndex]} 
-          alt={`${project.title} - view ${currentIndex + 1}`} 
+        <img
+          key={images[currentIndex]}
+          src={images[currentIndex]}
+          alt={`${project.title} - view ${currentIndex + 1}`}
           className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
         />
 
@@ -63,7 +65,7 @@ export default function ProjectGallery({ project }) {
           backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.4) 3px, rgba(0,0,0,0.4) 4px)',
         }} />
 
-        {/* Zoom Button - Click to zoom entire image */}
+        {/* Zoom Button */}
         <button
           onClick={(e) => { e.preventDefault(); e.stopPropagation(); setLightboxOpen(true); }}
           className="absolute inset-0 w-full h-full cursor-zoom-in z-0 flex items-start justify-end p-3"
@@ -74,7 +76,7 @@ export default function ProjectGallery({ project }) {
           </div>
         </button>
 
-        {/* Navigation Contols */}
+        {/* Navigation Controls */}
         {images.length > 1 && (
           <>
             <button
@@ -91,11 +93,11 @@ export default function ProjectGallery({ project }) {
             </button>
 
             {/* Dots */}
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10 items-center">
               {images.map((img, idx) => (
-                <div 
-                  key={idx} 
-                  className={`w-1.5 h-1.5 rounded-full transition-colors ${idx === currentIndex ? 'bg-[#c07a3f]' : 'bg-white/40'}`} 
+                <div
+                  key={idx}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors ${idx === currentIndex ? 'bg-[#c07a3f]' : 'bg-white/40'}`}
                 />
               ))}
             </div>
@@ -105,10 +107,10 @@ export default function ProjectGallery({ project }) {
 
       {/* Lightbox Portal */}
       {lightboxOpen && createPortal(
-        <Lightbox 
-          images={images} 
-          currentIndex={currentIndex} 
-          onClose={() => setLightboxOpen(false)} 
+        <Lightbox
+          images={images}
+          currentIndex={currentIndex}
+          onClose={() => setLightboxOpen(false)}
           onNavigate={navigate}
         />,
         document.body
