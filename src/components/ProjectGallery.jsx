@@ -29,8 +29,29 @@ export default function ProjectGallery({ project }) {
 
   if (!hasImages) {
     return (
-      <div className="relative border-b border-[#111] overflow-hidden bg-[#080808]">
+      <div className="relative border-b border-[#111] bg-[#080808] aspect-[16/9] w-full group overflow-hidden">
+        {/* The PCB SVG base */}
         <ProjectImage id={project.id} />
+        
+        {/* Creative Overlay if a link exists */}
+        {project.link && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-[1px] transition-all group-hover:bg-black/10">
+            <a
+              href={project.link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="px-6 py-2.5 bg-[#0d0d0d] border border-[#c07a3f]/40 text-[#c07a3f] font-mono text-[11px] uppercase tracking-widest rounded-sm hover:bg-[#c07a3f] hover:text-[#0d0d0d] transition-all duration-300 flex items-center gap-3 active:scale-95 shadow-xl shadow-black/60"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c07a3f] animate-pulse" />
+              {project.link.label || 'View Resource'}
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M11 1L6 6m5-5v4m0-4H7m0 10h-5a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1h4" />
+              </svg>
+            </a>
+          </div>
+        )}
+
         <div className="absolute inset-0 pointer-events-none mix-blend-overlay" style={{
           backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.4) 3px, rgba(0,0,0,0.4) 4px)',
         }} />

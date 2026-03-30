@@ -88,7 +88,7 @@ export const ALL_PROJECTS = [
     tags: ['PCIe', 'NVMe', 'Impedance Control', 'High-Speed', 'Radxa'],
     status: 'Completed',
     nda: false,
-    images: ['/projects/p04/1.jpg', '/projects/p04/2.png', '/projects/p04/3.jpg', '/projects/p04/nvme-vid.gif'],
+    images: ['/projects/p04/1.jpg', '/projects/p04/2.png', '/projects/p04/3.jpg'],
     thumbnail: '/projects/p04/1.jpg',
   },
   {
@@ -127,8 +127,6 @@ export const ALL_PROJECTS = [
     tags: ['SBC', 'Mixed-Signal', 'PoE', 'I²S Audio', 'LED Driver'],
     status: 'In Production',
     nda: true,
-    images: ['/projects/p06/stall-monitor.png', '/projects/p06/stall-monitor-stall.png'],
-    thumbnail: '/projects/p06/stall-monitor.png',
     link: { label: 'View Resource', href: 'https://www.horcery.com/stall-monitor-system' },
   },
   // Flexible Electronics & Wearables
