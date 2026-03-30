@@ -20,17 +20,18 @@ export default function About() {
               <p className="font-mono text-[11px] text-[#c07a3f] tracking-widest uppercase">About</p>
             </div>
             <h2 className="text-2xl md:text-4xl font-black text-[#e0dbd3] tracking-tight mb-8 leading-tight">
-              Three years.<br />
+              Four years.<br />
               Four products shipped.<br />
               <span className="text-[#888]">Same company.</span>
             </h2>
 
             <div className="space-y-5 text-[#aaa] text-sm leading-relaxed">
               <p>
-                I joined Atlas Labs as a junior in 2022 and have been promoted three times since.
-                Not because I write clean code — though I do — but because I take full ownership.
-                When a project needs a custom driver, I write it. When a product needs a test jig,
-                I design it. When a board goes into production, I stay involved until the yield is right.
+                I am an Embedded Systems Engineer at Atlas Labs, where I have navigated four promotions from Intern to Level 2 since 2022. My progression is built on a simple premise: I take full ownership of the products I build. To date, I have led four major hardware products from initial concept to successful market launch.
+                I specialize in the full hardware stack—Schematic → PCB Layout → Firmware → Production Validation. I am most effective when solving the "hard problems" of volume production, whether that's maintaining signal integrity on high-speed PCIe interfaces, optimizing IoT devices for 70µA deep-sleep states, or authoring custom drivers from scratch to bypass critical bottlenecks.
+                I believe an engineer's job isn't done at the "Export Gerber" stage; it's done when the production yield is optimized and the hardware is performing reliably in the field. This commitment to reliability is backed by a First Class Honours BEng from London Metropolitan University, where I received the Best Performer and Most Outstanding Performance awards.
+
+
               </p>
               <p>
                 My focus is the full hardware stack: schematic to PCB layout to firmware to production
