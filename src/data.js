@@ -152,6 +152,8 @@ export const ALL_PROJECTS = [
     tags: ['Flex PCB', 'GSR', 'ADC', 'Wearable', 'Biometric'],
     status: 'Completed',
     nda: false,
+    images: ['/projects/p07/1.jpg', '/projects/p07/2.png'],
+    thumbnail: '/projects/p07/1.jpg',
   },
   {
     id: 'P08',
@@ -213,6 +215,9 @@ export const ALL_PROJECTS = [
     tags: ['Industrial', 'Electromechanical', 'CAN Bus', 'System Integration'],
     status: 'Completed',
     nda: true,
+    images: ['/projects/p10/krakatoa-ai.png'],
+    thumbnail: '/projects/p10/krakatoa-ai.png',
+    link: { label: 'View Project', href: 'https://www.youtube.com/watch?v=rhZ5_B8kHp4&t=3s' },
   },
 ]
 
