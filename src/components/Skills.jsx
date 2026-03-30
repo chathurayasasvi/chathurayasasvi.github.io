@@ -1,3 +1,6 @@
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { SKILLS } from '../data';
 import { 
   ArduinoIcon, ZephyrIcon, KiCadIcon, AltiumIcon, 
   NRFIcon, STM32Icon, ESP32Icon, FreeRTOSIcon, 
