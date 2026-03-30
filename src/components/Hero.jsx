@@ -61,7 +61,7 @@ export default function Hero() {
           <p className="text-[#666] leading-relaxed mb-12 max-w-lg text-sm md:text-base">
             I design the board. Write the driver. Build the test jig.
             Ship the product. Three years at Atlas Labs doing exactly that —
-            from 6-layer mixed-signal mainboards to 70µA IoT devices.
+            from 4-layer mixed-signal mainboards to 70µA IoT devices.
           </p>
 
           {/* CTAs */}
@@ -79,9 +79,9 @@ export default function Hero() {
             >
               {/* Download icon — PCB-style arrow */}
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
-                <line x1="6.5" y1="1" x2="6.5" y2="9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                <polyline points="3.5,6.5 6.5,9.5 9.5,6.5" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                <line x1="1" y1="12" x2="12" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                <line x1="6.5" y1="1" x2="6.5" y2="9" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                <polyline points="3.5,6.5 6.5,9.5 9.5,6.5" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                <line x1="1" y1="12" x2="12" y2="12" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
               </svg>
               Download CV
             </a>
