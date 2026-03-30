@@ -61,7 +61,7 @@ export default function Hero() {
           <p className="text-[#666] leading-relaxed mb-12 max-w-lg text-sm md:text-base">
             I design the board. Write the driver. Build the test jig.
             Ship the product. Three years at Atlas Labs doing exactly that —
-            from 4-layer mixed-signal mainboards to 70µA IoT devices.
+            from 6-layer mixed-signal mainboards to 70µA IoT devices.
           </p>
 
           {/* CTAs */}

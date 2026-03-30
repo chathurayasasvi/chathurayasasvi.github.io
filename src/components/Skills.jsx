@@ -25,11 +25,10 @@ function LayerStack() {
         {stack.map((l, i) => (
           <div key={i} className="flex items-center gap-4">
             <div
-              className={`rounded-[1px] flex-shrink-0 transition-opacity ${
-                l.type === 'outer' ? 'bg-[#c07a3f] opacity-90' :
-                l.type === 'inner' ? 'bg-[#a06830] opacity-80' :
-                'bg-[#1a3d1a] opacity-[0.25]'
-              }`}
+              className={`rounded-[1px] flex-shrink-0 transition-opacity ${l.type === 'outer' ? 'bg-[#c07a3f] opacity-90' :
+                  l.type === 'inner' ? 'bg-[#a06830] opacity-80' :
+                    'bg-[#1a3d1a] opacity-[0.25]'
+                }`}
               style={{ width: 'clamp(60px, 20vw, 120px)', height: `${l.height}px` }}
             />
             <div className="flex items-center justify-between flex-1 max-w-[200px]">
@@ -77,7 +76,7 @@ export default function Skills() {
           >
             <LayerStack />
             <p className="text-xs text-[#888] leading-relaxed font-mono">
-              6-layer stack used on the AI monitoring system mainboard — balanced copper distribution
+              4-layer stack used on the AI monitoring system mainboard — balanced copper distribution
               for minimal warping, inner planes dedicated to GND and 5V power distribution.
             </p>
           </motion.div>
