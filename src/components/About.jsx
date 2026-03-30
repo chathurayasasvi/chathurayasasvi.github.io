@@ -6,7 +6,7 @@ export default function About() {
   const inView = useInView(ref, { once: true, margin: '-60px' })
 
   return (
-    <section id="about" className="py-32 border-t border-[#141414]" ref={ref}>
+    <section id="about" className="py-16 md:py-32 border-t border-[#141414]" ref={ref}>
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
