@@ -52,9 +52,6 @@ export default function ProjectGallery({ project }) {
           </div>
         )}
 
-        <div className="absolute inset-0 pointer-events-none mix-blend-overlay" style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.4) 3px, rgba(0,0,0,0.4) 4px)',
-        }} />
       </div>
     )
   }
@@ -100,10 +97,7 @@ export default function ProjectGallery({ project }) {
           </div>
         )}
 
-        {/* Scanline overlay */}
-        <div className="absolute inset-0 pointer-events-none mix-blend-overlay" style={{
-          backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.4) 3px, rgba(0,0,0,0.4) 4px)',
-        }} />
+
 
         {/* Zoom Button */}
         <button
