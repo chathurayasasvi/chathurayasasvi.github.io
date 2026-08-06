@@ -132,7 +132,7 @@ export const ALL_PROJECTS = [
     nda: true,
     images: ['/projects/p06/stall-monitor-ai.png'],
     thumbnail: '/projects/p06/stall-monitor-ai.png',
-    link: { label: 'View Resource', href: 'https://www.horcery.com/stall-monitor-system' },
+    link: { label: 'View Resource', href: 'https://www.horcery.com/products/stall-monitor' },
   },
   // Flexible Electronics & Wearables
   {
